@@ -18,4 +18,15 @@ public class MagicBox<T> {
         }
         return false;
     }
+
+    public T pick() throws RuntimeException {
+        for (int i = 0; i < amountItems; i++) {
+            if (items[i] == null) {
+                throw new RuntimeException("Коробка не заполнена до конца! Осталось заполнить ячеек - " + (amountItems - i));
+            }
+        }
+        Random random = new Random();
+        int randomInt = random.nextInt(amountItems);
+        return items[randomInt];
+    }
 }

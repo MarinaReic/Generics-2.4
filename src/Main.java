@@ -7,6 +7,12 @@ public class Main {
         printResult(magicBoxColor.add("Синий"));
         printResult(magicBoxColor.add("Белый"));
         printResult(magicBoxColor.add("Чёрный"));
+        System.out.println("Случайно выбранный цвет - " + magicBoxColor.pick());
+
+        MagicBox<Integer> magicBoxInt = new MagicBox<>(3);
+        printResult(magicBoxInt.add(123));
+        printResult(magicBoxInt.add(456));
+        System.out.println("Случайно выбранное число - " + magicBoxInt.pick());
     }
 
     public static void printResult(boolean result) {
