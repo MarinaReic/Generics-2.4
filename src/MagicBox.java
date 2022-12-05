@@ -8,4 +8,14 @@ public class MagicBox<T> {
         this.amountItems = amountItems;
         this.items = (T[]) new Object[amountItems];
     }
+
+    public boolean add(T item) {
+        for (int i = 0; i < amountItems; i++) {
+            if (items[i] == null) {
+                items[i] = item;
+                return true;
+            }
+        }
+        return false;
+    }
 }
